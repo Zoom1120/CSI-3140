@@ -1,0 +1,8 @@
+.style3{
+width: 500px;
+height: 500px;
+text-align: center;
+background: radial-gradient(bottom left, blue, green);
+background: -webkit-radial-gradient(bottom left, blue, green, yellow);
+background: -moz-radial-gradient(bottom left, blue, green, yellow)
+}

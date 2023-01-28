@@ -1,0 +1,16 @@
+
+
+.base{
+    background-color: whitesmoke;
+    color: aquamarine;
+    border:2px solid aquamarine;
+}
+
+.base:hover{
+    background-color: aquamarine;
+    color: whitesmoke;
+    border:2px solid black;
+
+
+
+}

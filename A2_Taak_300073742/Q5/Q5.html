@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel ="stylesheet" href ="Q5-styles.css">
+    </head>
+
+    <body>
+        Is Number 1 a multiple of Number 2?
+        <br>
+        <br>
+        Number 1: 
+        <input type="number" id="num1">
+        <br>
+        Number 2:
+        <input type="number" id="num2">
+        <br>
+       
+        <input type="button" id="go!" value="Is Multiple?" onclick="myFunction()">
+        <br>
+
+        <p id="out"></p>
+
+        <script>
+        
+            function myFunction() {
+              var x = document.getElementById("num1").value;
+              var y = document.getElementById("num2").value;
+              var z = (x%y);
+                if(z == 0){
+                    document.getElementById("out").innerHTML = x + " is a multiple of " + y ;
+                }
+                else{
+                    document.getElementById("out").innerHTML = x + " is not a multiple of " + y;
+                }
+            }
+        </script>
+    </body>
+
+    <footer>
+
+    </footer>
+</html>

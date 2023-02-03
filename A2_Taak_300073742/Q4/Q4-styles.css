@@ -1,10 +1,27 @@
 img{
     position: relative;
-    -webkit-animation: movingImage linear 1s 1s 0 alternate;
+    -webkit-animation: movingImage linear 1s 1s 0 normal;
     animation-iteration-count: infinite;
 }
 
+
+@keyframes movingImage{
+    0%{top: 0px; left: 0px;}
+    25%{top: 0px; left: 50px;}
+    50%{top: 50px; left: 50px;}
+    75%{top: 50px; left: 0px;}
+    100%{top: 0px; left: 0px;}
+}
+
 @-webkit-keyframes movingImage{
+    0%{top: 0px; left: 0px;}
+    25%{top: 0px; left: 50px;}
+    50%{top: 50px; left: 50px;}
+    75%{top: 50px; left: 0px;}
+    100%{top: 0px; left: 0px;}
+}
+
+@-moz-keyframes movingImage{
     0%{top: 0px; left: 0px;}
     25%{top: 0px; left: 50px;}
     50%{top: 50px; left: 50px;}

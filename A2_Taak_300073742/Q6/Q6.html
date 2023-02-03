@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel ="stylesheet" href ="Q5-styles.css">
+    </head>
+
+    <body>
+
+        <br>
+        Is Number 1 a palindrome?
+        <br>
+        <br>
+        Number 1: 
+        <input type="number" id="num1">
+        <br>
+
+       <br>
+        <input type="button" id="go!" value="Is Palindrome?" onclick="myFunction()">
+        <br>
+
+        <p id="out"></p>
+
+        <script>
+        
+            function myFunction() {
+              var x = document.getElementById("num1").value;
+              var str = x.toString();
+
+            if(str.length != 5){
+                    alert("Must be enter a number that is exactly 5 digits of length");
+                    var y = "Must be enter a number that is exactly 5 digits of length";
+            }
+
+            else if( (str.charAt(0) == str.charAt(4)) && (str.charAt(1) == str.charAt(3) ) ){
+                var y = "Palindrome"
+
+              }
+              else{
+                var y = "Not a Palindrome";
+              }
+
+              document.getElementById("out").innerHTML = y;
+            }
+        </script>
+    </body>
+
+    <footer>
+
+    </footer>
+</html>

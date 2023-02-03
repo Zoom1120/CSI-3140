@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<body id="body">
+
+    <h2>JavaScript can Change HTML</h2>
+
+    <p id="p1">Hello World!</p>
+    <p id="p2"></p>
+
+    <script>
+        var products = [
+
+            {
+                name: "Almonds - $0.59",
+                vegetarian: true,
+                LactoseIntolerant: true,
+                GlutenIntolerant: true,
+                price: 0.59,
+                category: "Misc",
+                imgUrl: "https://images.unsplash.com/photo-1615485737457-f07082c77813?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"
+            },
+
+            {
+                name: "Apples (Galla) - $0.99",
+                vegetarian: true,
+                LactoseIntolerant: true,
+                GlutenIntolerant: true,
+                price: 0.99,
+                category: "Vegetables",
+                imgUrl: "https://i5.walmartimages.ca/images/Enlarge/094/514/6000200094514.jpg"
+            },
+
+        ]
+        document.getElementById("p1").innerHTML = "New text!";
+        document.getElementById("p2").innerHTML = "Hello";
+        var img = document.createElement('img');
+        img.setAttribute('width', '30px');
+        img.setAttribute('height', '30px');
+
+
+        img.src = products[0].imgUrl;
+        //img.src = 'https://images.unsplash.com/photo-1615485737457-f07082c77813?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80';
+        document.getElementById('body').appendChild(img);
+    </script>
+
+    <p>The paragraph above was changed by a script.</p>
+
+</body>
+
+</html>

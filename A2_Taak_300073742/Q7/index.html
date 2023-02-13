@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel ="stylesheet" href ="Q5-styles.css">
+    </head>
+
+    <body>
+
+        <input type="button" id="go!" value="Generate Table" onclick="createTable()">
+
+        <script>
+            var ProductId = 1;
+            var Product1 = 0;
+            var Product2 = 0;
+            var Product3 = 0;
+            var Product4 = 0;
+            var Product5 = 0;
+
+
+            while(ProductId == "1" || ProductId == "2" || ProductId == "3" || ProductId == "4" || ProductId == "5"){
+            ProductId = window.prompt('Enter a valid product number. (Or enter 0 for product number and quantity to exit and see results)');
+            Quantity = window.prompt('Enter how much of product ' + ProductId + ' you would like to purchase. (Or enter 0 for product number and quantity to exit and see results)');
+            
+                switch(ProductId) {
+
+                    case "1":
+                    Product1 += parseInt(Quantity);
+                    break;
+
+                    case "2":
+                    Product2 += parseInt(Quantity);
+                    break;
+
+                    case "3":
+                    Product3 += parseInt(Quantity);
+                    break;
+
+                    case "4":
+                    Product4 += parseInt(Quantity);
+                    break;
+                    
+                    default:
+                    Product5 += parseInt(Quantity);
+                
+                }
+
+            }
+
+            function createTable() {
+                var i=0, rowE1=null, rowE2=null, rowE3=null, rowE4=null, rowE5=null, 
+                    tableEl = document.createElement("table");
+
+                    rowE1 = tableEl.insertRow();
+                    rowE1.insertCell().textContent = "Total Quantity of Product 1: "+ Product1 + " Total Price for Product 1: " + Product1 * 2.98;
+
+                    rowE2 = tableEl.insertRow();
+                    rowE2.insertCell().textContent = "Total Quantity of Product 2: "+ Product2 + " Total Price for Product 1: " + Product2 * 4.50;
+
+                    rowE3 = tableEl.insertRow();
+                    rowE3.insertCell().textContent = "Total Quantity of Product 3: "+ Product3 + " Total Price for Product 1: " + Product3 * 9.98;
+
+                    rowE4 = tableEl.insertRow();
+                    rowE4.insertCell().textContent = "Total Quantity of Product 4: "+ Product4 + " Total Price for Product 1: " + Product4 * 4.49;
+
+                    rowE5 = tableEl.insertRow();
+                    rowE5.insertCell().textContent = "Total Quantity of Product 5: "+ Product5 + " Total Price for Product 1: " + Product5 * 6.87;
+
+                document.body.appendChild( tableEl);
+            }            
+        </script>
+
+    </body>
+
+</html>

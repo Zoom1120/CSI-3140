@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<head>
+
+</head>
+
+<body>
+    <h1 id="out">Guess the number</h1>
+    <p></p>
+    <br>
+    <form>
+        <input id="guess" type="number">
+        <input id="confirm_guess" type="button" value="Guess!">
+    </form>
+    <p id="feedback"></p>
+
+
+
+
+    <script>
+        function verify(state) {
+            let guess = parseInt(document.getElementById("guess").value, 10);
+
+            if (isNaN(guess)) {
+                document.getElementById("feedback").innerHTML = "Wrong input! You should enter a number between 1 and 1000.";
+                start(state);
+            } else if (guess < state.num) {
+                state.counter++;
+                console.log("less")
+
+                document.getElementById("feedback").innerHTML = "Too low!"
+            } else if (guess > state.num) {
+                state.counter = state.counter + 1;
+                console.log("more")
+                document.getElementById("feedback").innerHTML = "Too high!"
+            } else if (state.num == guess) {
+                state.counter = state.counter + 1;
+                state.num = Math.floor(Math.random() * 1001);
+                if (state.counter < 10) {
+                    document.getElementById("feedback").innerHTML = "Either you know the secret or you got lucky!";
+                } else if (state.counter == 10) {
+                    document.getElementById("feedback").innerHTML = "Ahah! You know the secret!";
+                } else if (state.counter > 10) {
+                    document.getElementById("feedback").innerHTML = "You should be able to do better!";
+                }
+
+            }
+        }
+
+        function start(state) {
+            document.getElementById("confirm_guess").addEventListener("click", () => verify(state), false);
+        }
+
+        var num = Math.floor(Math.random() * 1001);
+        var counter = 0;
+
+        let state = {
+            num,
+            counter
+        }
+
+        //document.getElementById("out").innerHTML = num;
+        document.getElementById("out").innerHTML = "Guess a number";
+        window.addEventListener("load", () => start(state), false);
+    </script>
+</body>

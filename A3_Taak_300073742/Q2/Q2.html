@@ -19,7 +19,7 @@
 
     <script>
         var num = Math.floor(Math.random() * 1001);
-        document.getElementById("out").innerHTML = num;
+        //document.getElementById("out").innerHTML = num;
         window.addEventListener("load", () => start(num), false);
 
         function verify(num) {
@@ -43,6 +43,8 @@
 
                 document.getElementById("feedback").innerHTML = "Congratulations You Guessed Correctly! Guess a new number to play again";
                 var num = Math.floor(Math.random() * 1001);
+                //document.getElementById("out").innerHTML = num;
+                start(num);
             }
         }
 

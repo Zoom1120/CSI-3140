@@ -22,4 +22,13 @@ function start() {
 
     console.log(arr);
 
+    var str = "<table> <thead> <tr> <th> Array Index </th> <th> Value </th> </tr> </thead> <tbody> ";
+
+    for (var k = 1; k < arr.length; k++) {
+        str += "<tr> <td>" + k + "</td> <td>" + arr[k] + "</td> </tr>" ;
+    }
+
+    str += "</tbody> </table>";
+
+    document.getElementById("out").innerHTML = str;
 }

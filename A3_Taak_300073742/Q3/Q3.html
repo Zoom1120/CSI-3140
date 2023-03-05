@@ -37,13 +37,16 @@
                 state.counter = state.counter + 1;
                 state.num = Math.floor(Math.random() * 1001);
                 if (state.counter < 10) {
-                    document.getElementById("feedback").innerHTML = "Either you know the secret or you got lucky!";
+                    document.getElementById("feedback").innerHTML = "Either you know the secret or you got lucky! Guess another number to play again!";
                 } else if (state.counter == 10) {
-                    document.getElementById("feedback").innerHTML = "Ahah! You know the secret!";
+                    document.getElementById("feedback").innerHTML = "Ahah! You know the secret! Guess another number to play again!";
                 } else if (state.counter > 10) {
-                    document.getElementById("feedback").innerHTML = "You should be able to do better!";
+                    document.getElementById("feedback").innerHTML = "You should be able to do better! Guess another number to play again!";
                 }
 
+                state.num = Math.floor(Math.random() * 1001);
+                state.counter = 0;
+                start(state);
             }
         }
 

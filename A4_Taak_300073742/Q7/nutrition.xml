@@ -1,0 +1,68 @@
+<?xml version = "1.0"?>
+<?xml-stylesheet type = "text/xsl" href = "nutrition.xsl"?>
+
+<!-- Fig. 15.18: sports.xml -->
+<!-- Sports Database -->
+
+<nutrition>
+    <productName>Grandma White's Cookies</productName>
+    
+     <nutrient id = "0">
+        <name>Serving Size</name>
+        <value>1 Package</value>
+    </nutrient>
+    
+   
+    <nutrient id = "1">
+        <name>Calories</name>
+        <value>260</value>
+    </nutrient>
+    
+    <nutrient id = "2">
+        <name>Fat Calories</name>
+        <value>100</value>
+    </nutrient>
+    
+    <nutrient id = "3">
+        <name>Fat</name>
+        <value>11 grams</value>
+    </nutrient>
+    
+    <nutrient id = "4">
+        <name>Saturated Fat</name>
+        <value>2 grams</value>
+    </nutrient>
+    
+    <nutrient id = "5">
+        <name>Cholesterol</name>
+        <value>5 milligrams</value>
+    </nutrient>
+    
+    <nutrient id = "6">
+        <name>Sodium</name>
+        <value>210 milligrams</value>
+    </nutrient>
+    
+    <nutrient id = "7">
+        <name>Carbohydrates</name>
+        <value>36 grams</value>
+    </nutrient>
+    
+    <nutrient id = "8">
+        <name>Fiber</name>
+        <value>2 grams</value>
+    </nutrient>
+    
+    <nutrient id = "9">
+        <name>Sugars</name>
+        <value>15 grams</value>
+    </nutrient>
+    
+    <nutrient id = "10">
+        <name>Protein</name>
+        <value>5 grams</value>
+    </nutrient>
+    
+ 
+    
+</nutrition>

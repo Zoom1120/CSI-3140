@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="Q6.js"></script>
+    <link href="Q6.css" rel="stylesheet"> 
+</head>
+<body>
+
+    <canvas id = "drawLines" width="400" height = "200"
+    style="border: 1px solid black;">
+    </canvas>
+    <script>
+        var canvas = document.getElementById("drawLines");
+        var context = canvas.getContext("2d");
+
+         //Adding Linear Gradient
+        var gradient= context.createLinearGradient(75, 190, 325, 10);
+        gradient.addColorStop(0, "red");
+        gradient.addColorStop(0.5, "orange");
+        gradient.addColorStop(1, "yellow");
+        context.fillStyle = gradient;
+        
+        //Triangle
+        let region = new Path2D();
+        
+        //context.beginPath();
+        region.moveTo(200, 10);
+        region.lineTo(75, 190);
+        region.lineTo(325, 190);
+        region.lineTo(200,10)
+        region.lineWidth = 5; // line width
+        region.lineCap = "square"; // line cap style
+        region.strokeStyle = "black" // line color
+        
+        context.fillStyle = gradient;
+        context.fill(region, "evenodd"); // draw path
+
+       
+
+        //context.fillRect(75, 190, 325, 10);
+        //context.fillRect(20, 20, 200, 100);
+
+     </script>
+</body> 
+</html>
+

@@ -2,16 +2,84 @@
 <html>
 
 <head>
+    <link rel="stylesheet" type="text/css" href="Q1.css" />
     <script src="Q1.js"></script>
+
+<script  src="http://code.jquery.com/jquery-1.9.1.min.js" ></script>
 </head>
+
 <body>
-<div id="container">
-    <table id="table">
-    
+
+    <div id="container">
+
+
+    </div>
+    <table>
+        <tr><td id = 0></td><td id = 1></td><td id = 2></td><td id = 3></td></tr>
+        <tr><td id = 4></td><td id = 5></td><td id = 6></td><td id = 7></td></tr>
+        <tr><td id = 8></td><td id = 9></td><td id = 10></td><td id = 11></td></tr>
+        <tr><td id = 12></td><td id = 13></td><td id = 14></td><td id = 15></td></tr>
     </table>
 
-</div>
+    <script>
+        
+       
+
+        var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+        shuffle(arr);
+        arr.unshift('');
+        console.log(arr);
+      
+        for(var i = 0; i < 16; i++){
+            document.getElementById(i).innerHTML = arr[i];
+        }
+        
+
+        var x = 0;
+        var y = 0;
+
+        var one = document.getElementById('1');
+        one.addEventListener("click", clickOne, false);
+
+       
+
+        function clickOne(e) {
+            if(e.target.getAttribute('class') == 'number'){
+                console.log(e.target.innerHTML);
+                var num = e.target.innerHTML;
+
+                e.target.innerHTML = '';
+                document.getElementById('table').rows[x].cells[y].innerHTML = num;
+
+                console.log(e.target);
+                console.log(document.getElementById('table').rows[x].cells[y].innerHTML);
+            }
+        }
+
+        function nextTo(){
+
+        }
+
+        //Function suffle taken from stack overflow https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+        function shuffle(array) {
+            let currentIndex = array.length, randomIndex;
+
+            // While there remain elements to shuffle.
+            while (currentIndex != 0) {
+
+                // Pick a remaining element.
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--;
+
+                // And swap it with the current element.
+                [array[currentIndex], array[randomIndex]] = [
+                    array[randomIndex], array[currentIndex]];
+            }
+
+            return array;
+        }
+    </script>
 
 </body>
-</html>
 
+</html>

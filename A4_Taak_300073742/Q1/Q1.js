@@ -1,39 +1,20 @@
+// var str = "";
+// var table = document.getElementById('container');
 
+// str += "<table>";
 
-function click( e )
-{
-    if(e.target.tagName.toLowerCase() == "a"){
+// for(i = 0 ; i < 4; i++){
+//     str += "<tr>"
 
-        if(e.ctrlKey){
-            alert("This event was triggered because you clicked on the anchor tag!");
-        }
-        else if(e.shiftKey){
-            alert("The event name that triggered this event is 'click' ");
-        }
-        
-    }
+//     for(j=0; j < 4; j++){
+//         str += "<td>";
+//         str += '3';
+//         str += "</td>";
+//     }
 
-    else if(e.target.tagName.toLowerCase() == "p"){
+//     str += "</tr>";
+// }
 
-        if(e.ctrlKey){
-            alert("This event was triggered because you clicked on the paragraph tag!");
-        }
-        else if(e.shiftKey){
-            alert("The event name that triggered this event is 'click' ");
-        }
+// str += "</table>";
 
-    }
-
-    else if(e.target.tagName.toLowerCase() == "li"){
-
-        if(e.ctrlKey){
-            alert("This event was triggered because you clicked on the list tag!");
-        }
-        else if(e.shiftKey){
-            alert("The event name that triggered this event is 'click' ");
-        }
-
-    }
-}
-
-document.addEventListener("click",click,false);
+// table.innerHTML = str;

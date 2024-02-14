@@ -1,7 +1,6 @@
 img{
     position: relative;
-    -webkit-animation: movingImage linear 1s 1s 0 normal;
-    animation-iteration-count: infinite;
+    -webkit-animation: movingImage linear 1s 1s infinite normal;
 }
 
 

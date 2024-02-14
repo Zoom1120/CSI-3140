@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="Q5.js"></script>
+    <link href="Q5.css" rel="stylesheet"> 
+</head>
+<body>
+
+    <canvas id = "drawLines" width="400" height = "200"
+    style="border: 1px solid black;">
+    </canvas>
+
+    <script>
+    var canvas = document.getElementById("drawLines");
+    var context = canvas.getContext("2d");
+
+    
+    context.font = "55px serif";
+    context.fillStyle = "skyblue";
+    context.textBaseline = "top";
+    context.textAlign = "center";
+    context.shadowOffsetX = 2;
+    context.shadowOffsetY= 5;
+    context.shadowBlur = 6;
+    context.shadowColor = "rgba(128,128,128)";
+    //context.shadowColor = "rgba(0,0,0,0.3)";
+
+    context.fillText ("HTML5 Canvas", 200, 70);
+
+    </script>
+
+</body> 
+</html>
+

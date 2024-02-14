@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+    </head>
+
+    <body>
+        <form id="Conv" method="post" onsubmit="return start();" action="#">
+            Initial Temperature Value for Conversion (in Degrees):
+            <br> 
+            <input type = "number" id = "temp" name="temperature" value="0"> 
+            <br>
+            
+            <input type="button" value="Convert Fahrenheit to Celsius" id = "run1"> 
+            <input type="button" value="Convert Celsius to Fahrenheit" id = "run2">
+
+        </form>
+
+        <p id = "out"></p>
+        
+        
+        <script>
+            
+            function calc1(){
+                var num = document.getElementById('temp').value;
+                
+                document.getElementById("out").innerHTML = celsius(num);
+                
+            }
+
+            function calc2(){
+                var num = document.getElementById('temp').value;
+                document.getElementById("out").innerHTML = fahrenheit(num);
+            }
+
+            
+
+            function celsius(f){
+                return 5/9*(f-32);
+            }
+
+            function fahrenheit(c){
+                return 9/5*c +32; 
+            }
+
+            function start(){
+                var button1 = document.getElementById("run1");
+                button1.addEventListener("click", calc1,false);
+                //out.innerHTML = celsius(32);
+                var button2 = document.getElementById("run2");
+                button2.addEventListener("click", calc2,false);
+            }
+
+            window.addEventListener("load", start, false);
+        </script>
+    </body>
+
+</html>

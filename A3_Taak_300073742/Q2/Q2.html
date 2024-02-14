@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<head>
+
+</head>
+
+<body>
+    <h1 id="out">Guess the number</h1>
+    <p></p>
+    <br>
+    <form>
+        <input id="guess" type="number">
+        <input id="confirm_guess" type="button" value="Guess!">
+    </form>
+    <p id="feedback"></p>
+
+
+
+
+    <script>
+        var num = Math.floor(Math.random() * 1001);
+        //document.getElementById("out").innerHTML = num;
+        window.addEventListener("load", () => start(num), false);
+
+        function verify(num) {
+            console.log("wtf")
+
+            let guess = parseInt(document.getElementById("guess").value, 10);
+
+            console.log("bruh", guess)
+            console.log("shee", num)
+
+            if (guess < num) {
+                console.log("less")
+
+                document.getElementById("feedback").innerHTML = "Too low!"
+            } else if (guess > num) {
+                console.log("more")
+
+                document.getElementById("feedback").innerHTML = "Too high!"
+            } else if (num == guess) {
+                console.log("equal")
+
+                document.getElementById("feedback").innerHTML = "Congratulations You Guessed Correctly! Guess a new number to play again";
+                var num = Math.floor(Math.random() * 1001);
+                //document.getElementById("out").innerHTML = num;
+                start(num);
+            }
+        }
+
+        function start(num) {
+            document.getElementById("confirm_guess").addEventListener("click", () => verify(num), false);
+        }
+    </script>
+</body>
